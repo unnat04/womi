@@ -1,0 +1,40 @@
+{% extends 'store/main.html' %} {% load static %} {% block content %}
+<div class="text-center my-4">
+  <a
+    href="{% url 'store' %}"
+    class="btn {% if selected_category == 0 %}btn-primary{% else %}btn-outline-primary{% endif %} mx-2"
+  >
+    All
+  </a>
+  {% for category in categories %}
+  <a
+    href="?category={{ category.id }}"
+    class="btn {% if selected_category == category.id %}btn-primary{% else %}btn-outline-primary{% endif %} mx-2"
+  >
+    {{ category.name }}
+  </a>
+  {% endfor %}
+</div>
+
+<div class="row">
+  {% for product in hello %}
+  <div class="col-lg-4">
+    <img class="thumbnail" src="{{product.imageURL}}" />
+    <div class="box-element product">
+      <h6><strong>{{product.name}}</strong></h6>
+      <hr />
+      <button
+        data-product="{{product.id}}"
+        data-action="add"
+        class="btn btn-outline-secondary add-btn update-cart"
+      >
+        Add to cart
+      </button>
+      <h4 style="display: inline-block; float: right">
+        <strong>Rs.{{product.price|floatformat:2}}/{{product.unit}}</strong>
+      </h4>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock content %}

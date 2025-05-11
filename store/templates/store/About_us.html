@@ -1,0 +1,46 @@
+{% extends 'store/main.html' %} {% load static %} {% block content %}
+
+<div class="container my-5">
+  <div class="text-center mb-4">
+    <h1>About Us</h1>
+    <hr class="w-25 mx-auto" />
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <img
+        src="{% static 'images/farmers.avif' %}"
+        alt="Fresh farm products"
+        class="img-fluid rounded shadow"
+      />
+    </div>
+    <div class="col-md-6">
+      <p class="lead">
+        At <strong>Omi Multipurpose</strong>, we are committed to transforming
+        the way farm products reach Nepali households. Our mission is simple yet
+        powerful — to deliver farm-fresh, organic, and pesticide-free goods from
+        local sellers directly to buyers in a timely and transparent manner. We
+        work closely with trusted farmers and producers who cultivate their
+        crops using sustainable practices, free from harmful chemicals and
+        preservatives.
+      </p>
+      <p>
+        Our platform is a bridge that connects conscious consumers with ethical
+        producers. We offer a wide range of essential farm products including
+        unrefined oils, organically grown rice, seasonal vegetables, and much
+        more — all carefully curated to ensure top quality and freshness. Every
+        item sold on our site is sourced with care and delivered with a promise
+        of purity and health.
+      </p>
+      <p>
+        In a time where food safety and nutrition are more important than ever,
+        we aim to empower both buyers and sellers by creating a reliable online
+        marketplace that values trust, health, and community. Join us in our
+        journey to build a healthier Nepal — one meal, one farm, and one honest
+        trade at a time.
+      </p>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
